@@ -1,0 +1,16 @@
+.study-buddy-logo {
+  position: absolute;
+  top:1px
+}
+
+.study-buddy-logo{
+width: 300px;
+}
+
+#navbar {
+
+  display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    flex-direction: row;
+  }
