@@ -1,6 +1,10 @@
+header {
+  height: 300px;
+}
+
 .study-buddy-logo {
   position: absolute;
-  top:1px
+
 }
 
 .study-buddy-logo{
@@ -11,6 +15,6 @@ width: 300px;
 
   display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
     flex-direction: row;
   }

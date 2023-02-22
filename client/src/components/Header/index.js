@@ -11,7 +11,7 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <>
+    <header>
       <img
         className="study-buddy-logo"
         src={logo}
@@ -47,7 +47,7 @@ const Header = () => {
         
       </nav>
   
-    </>
+    </header>
   );
 };
 
