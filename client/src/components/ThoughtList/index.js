@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import "./thoughtList.css";
 const ThoughtList = ({
   thoughts, // this will be changed to decks later
   title,    // we will also need a description and a card object to be passed
@@ -16,8 +16,8 @@ const ThoughtList = ({
       {showTitle && <h3>{title}</h3>}
       {thoughts &&
         thoughts.map((thought) => (
-          <div key={thought._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+          <div key={thought._id} className="card mb-3" >
+            <h4 className="card-header bg-info text-light p-2 m-0">
               {showUsername ? (
                 <Link
                   className="text-light"
@@ -25,25 +25,26 @@ const ThoughtList = ({
                 >
                   {thought.thoughtAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this thought on {thought.createdAt}
+                    created this deck on {thought.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this thought on {thought.createdAt}
+                    created this deck on {thought.createdAt}
                   </span>
                 </>
               )}
             </h4>
-            <div className="card-body bg-light p-2">
-              <p>{thought.thoughtText}</p>
+            <div className="card-body p-2 " >
+              {/* <h3>{thought.thoughtText}</h3> */}
+              <h3>This will be the deck title</h3>
             </div>
             <Link
-              className="btn btn-primary btn-block btn-squared"
+              className="btn btn-info btn-block btn-squared"
               to={`/thoughts/${thought._id}`}
             >
-              Join the discussion on this thought.
+              Click here to see the deck
             </Link>
           </div>
         ))}
