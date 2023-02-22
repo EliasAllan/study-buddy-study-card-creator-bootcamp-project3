@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ThoughtList = ({
-  thoughts,
-  title,
+  thoughts, // this will be changed to decks later
+  title,    // we will also need a description and a card object to be passed
   showTitle = true,
   showUsername = true,
 }) => {
   if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3>You haven't created any cards yet</h3>;
   }
 
   return (
