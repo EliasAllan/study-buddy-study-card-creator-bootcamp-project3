@@ -1,5 +1,15 @@
 .card-body{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#center{
+    display: flex;
     justify-content: center;
-    flex-direction: row;
+}
+
+.my-3{
+    border: 1px dotted rgb(26, 26, 26);
+    border-radius: 2px;
 }
