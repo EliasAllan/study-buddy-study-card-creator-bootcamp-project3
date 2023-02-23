@@ -29,7 +29,7 @@ const SingleThought = () => {
         <h2>deck title will go here</h2>
         
         <span style={{ fontSize: '1rem' }}>
-        {thought.thoughtAuthor} made this deck on {thought.createdAt}
+        {thought.thoughtAuthor} created this deck on {thought.createdAt}
         </span>
       </h3>
       <div className="py-4">
