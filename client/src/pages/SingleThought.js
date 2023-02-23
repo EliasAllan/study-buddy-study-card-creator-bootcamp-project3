@@ -25,13 +25,14 @@ const SingleThought = () => {
   }
   return (
     <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
+      <h3 className="card-header bg-info text-light p-2 m-0">
+        deck title will go here <br />
         {thought.thoughtAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
-          had this thought on {thought.createdAt}
+          made this deck on {thought.createdAt}
         </span>
       </h3>
-      <div className="bg-light py-4">
+      <div className="py-4">
         <blockquote
           className="p-4"
           style={{

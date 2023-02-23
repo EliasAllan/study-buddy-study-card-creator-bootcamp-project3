@@ -21,8 +21,8 @@ const Home = () => {
             <div>Loading...</div>
           ) : (
             <ThoughtList
-              thoughts={thoughts}
-              title="This will be a list of all the decks..."
+            title="This will be a list of all the decks..."
+            thoughts={thoughts}
             />
           )}
         </div>

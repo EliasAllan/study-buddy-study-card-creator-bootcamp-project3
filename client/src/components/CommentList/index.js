@@ -8,10 +8,10 @@ const CommentList = ({ comments = [] }) => {
   return (
     <>
       <h3
-        className="p-5 display-inline-block"
-        style={{ borderBottom: '1px dotted #1a1a1a' }}
+        className="p-5"
+        style={{ border: '1px dotted #1a1a1a' }}
       >
-        Comments
+        The comments will be the cards later, and they will go inside the decks box
       </h3>
       <div className="flex-row my-4">
         {comments &&
