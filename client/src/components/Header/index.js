@@ -24,6 +24,9 @@ const Header = () => {
         
           {Auth.loggedIn() ? (
             <>
+              <Link className=" btn btn-lg btn-info m-2 " to="/create">
+                <i class="fa-solid fa-plus"></i>
+              </Link>
               <Link className=" navitem btn btn-lg btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
