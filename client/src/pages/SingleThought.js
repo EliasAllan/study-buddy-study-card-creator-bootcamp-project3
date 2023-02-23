@@ -25,29 +25,17 @@ const SingleThought = () => {
   }
   return (
     <div className="my-3">
-      <h3 className="card-header bg-info text-light p-2 m-0">
-        deck title will go here <br />
-        {thought.thoughtAuthor} <br />
+      <h3 id="deck-header" className="bg-info text-light p-2 m-0">
+        <h2>deck title will go here</h2>
+        
         <span style={{ fontSize: '1rem' }}>
-          made this deck on {thought.createdAt}
+        {thought.thoughtAuthor} made this deck on {thought.createdAt}
         </span>
       </h3>
       <div className="py-4">
-        <blockquote
-          className="p-4"
-          style={{
-            fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
-            lineHeight: '1.5',
-          }}
-        >
-          {thought.thoughtText}
-        </blockquote>
-      </div>
-
       <div className="my-5">
         <CommentList comments={thought.comments} />
+      </div>
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <CommentForm thoughtId={thought._id} />
