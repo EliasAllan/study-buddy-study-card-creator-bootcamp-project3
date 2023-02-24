@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import DeckList from '../components/DeckList';
-import DeckForm from '../components/DeckForm';
+// import DeckForm from '../components/DeckForm';
 
 import { QUERY_DECKS } from '../utils/queries';
 

@@ -6,7 +6,7 @@ import { ADD_CARD } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const CardForm = ({ thoughtId }) => {
+const CardForm = ({ deckId }) => {
   const [cardText, setCardText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -18,7 +18,7 @@ const CardForm = ({ thoughtId }) => {
     try {
       const { data } = await addCard({
         variables: {
-          thoughtId,
+          deckId,
           cardText,
           cardAuthor: Auth.getProfile().data.username,
         },

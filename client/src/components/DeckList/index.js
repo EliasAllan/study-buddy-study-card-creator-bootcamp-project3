@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./thoughtList.css";
+import "./deckList.css";
 const DeckList = ({
   decks, // this will be changed to decks later
   title,    // we will also need a description and a card object to be passed
@@ -21,9 +21,9 @@ const DeckList = ({
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${deck.thoughtAuthor}`}
+                  to={`/profiles/${deck.deckAuthor}`}
                 >
-                  {deck.thoughtAuthor} <br />
+                  {deck.deckAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
                     created this deck on {deck.createdAt}
                   </span>
@@ -37,7 +37,7 @@ const DeckList = ({
               )}
             </h4>
             <div className="card-body p-2 " >
-              {/* <h3>{deck.thoughtText}</h3> */}
+              {/* <h3>{deck.deckText}</h3> */}
               <h3>This will be the deck title</h3>
               <h4>This will be the deck description</h4>
             </div>
