@@ -29,7 +29,7 @@ const SingleDeck = () => {
         <h2>deck title will go here</h2>
         
         <span style={{ fontSize: '1rem' }}>
-        {deck.thoughtAuthor} created this deck on {deck.createdAt}
+        {deck.deckAuthor} created this deck on {deck.createdAt}
         </span>
       </h3>
       <div className="py-4">
@@ -38,7 +38,7 @@ const SingleDeck = () => {
       </div>
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <CardForm thoughtId={deck._id} />
+        <CardForm deckId={deck._id} />
       </div>
     </div>
   );
