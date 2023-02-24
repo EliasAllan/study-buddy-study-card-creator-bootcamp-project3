@@ -37,7 +37,6 @@ const DeckList = ({
               )}
             </h4>
             <div className="card-body p-2 " >
-              {/* <h3>{deck.deckText}</h3> */}
               <h3>This will be the deck title</h3>
               <h4>This will be the deck description</h4>
             </div>
