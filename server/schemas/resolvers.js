@@ -1,25 +1,25 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Thought } = require('../models');
+const { User, Deck } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('thoughts');
+      return User.find().populate('decks');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('thoughts');
+      return User.findOne({ username }).populate('decks');
     },
-    thoughts: async (parent, { username }) => {
+    decks: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
+      return Deck.find(params).sort({ createdAt: -1 });
     },
-    thought: async (parent, { thoughtId }) => {
-      return Thought.findOne({ _id: thoughtId });
+    deck: async (parent, { deckId }) => {
+      return Deck.findOne({ _id: deckId });
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('thoughts');
+        return User.findOne({ _id: context.user._id }).populate('decks');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -48,29 +48,29 @@ const resolvers = {
 
       return { token, user };
     },
-    addThought: async (parent, { thoughtText }, context) => {
+    addDeck: async (parent, { deckText }, context) => {
       if (context.user) {
-        const thought = await Thought.create({
-          thoughtText,
-          thoughtAuthor: context.user.username,
+        const deck = await Deck.create({
+          deckText,
+          deckAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { thoughts: thought._id } }
+          { $addToSet: { decks: deck._id } }
         );
 
-        return thought;
+        return deck;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    addComment: async (parent, { thoughtId, commentText }, context) => {
+    addCard: async (parent, { deckId, cardText }, context) => {
       if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
+        return Deck.findOneAndUpdate(
+          { _id: deckId },
           {
             $addToSet: {
-              comments: { commentText, commentAuthor: context.user.username },
+              cards: { cardText, cardAuthor: context.user.username },
             },
           },
           {
@@ -81,31 +81,31 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeThought: async (parent, { thoughtId }, context) => {
+    removeDeck: async (parent, { deckId }, context) => {
       if (context.user) {
-        const thought = await Thought.findOneAndDelete({
-          _id: thoughtId,
-          thoughtAuthor: context.user.username,
+        const deck = await Deck.findOneAndDelete({
+          _id: deckId,
+          deckAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
+          { $pull: { decks: deck._id } }
         );
 
-        return thought;
+        return deck;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeComment: async (parent, { thoughtId, commentId }, context) => {
+    removeCard: async (parent, { deckId, cardId }, context) => {
       if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
+        return Deck.findOneAndUpdate(
+          { _id: deckId },
           {
             $pull: {
-              comments: {
-                _id: commentId,
-                commentAuthor: context.user.username,
+              cards: {
+                _id: cardId,
+                cardAuthor: context.user.username,
               },
             },
           },

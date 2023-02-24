@@ -2,29 +2,29 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_COMMENT } from '../../utils/mutations';
+import { ADD_CARD } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const CommentForm = ({ thoughtId }) => {
-  const [commentText, setCommentText] = useState('');
+const CardForm = ({ thoughtId }) => {
+  const [cardText, setCardText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addComment, { error }] = useMutation(ADD_COMMENT);
+  const [addCard, { error }] = useMutation(ADD_CARD);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const { data } = await addComment({
+      const { data } = await addCard({
         variables: {
           thoughtId,
-          commentText,
-          commentAuthor: Auth.getProfile().data.username,
+          cardText,
+          cardAuthor: Auth.getProfile().data.username,
         },
       });
 
-      setCommentText('');
+      setCardText('');
     } catch (err) {
       console.error(err);
     }
@@ -33,8 +33,8 @@ const CommentForm = ({ thoughtId }) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'commentText' && value.length <= 280) {
-      setCommentText(value);
+    if (name === 'cardText' && value.length <= 280) {
+      setCardText(value);
       setCharacterCount(value.length);
     }
   };
@@ -59,9 +59,9 @@ const CommentForm = ({ thoughtId }) => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="commentText"
+                name="cardText"
                 placeholder="Add the contents of your study card ..."
-                value={commentText}
+                value={cardText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -77,7 +77,7 @@ const CommentForm = ({ thoughtId }) => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{' '}
+          You need to be logged in to share your decks. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
@@ -85,4 +85,4 @@ const CommentForm = ({ thoughtId }) => {
   );
 };
 
-export default CommentForm;
+export default CardForm;
