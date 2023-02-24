@@ -28,7 +28,7 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               <Link className=" btn btn-lg btn-info m-2 " to="/create">
-                <i class="solid fa-plus"> Create new deck</i>
+                <i className="solid fa-plus"> Create new deck</i>
               </Link>
               <Link className=" navitem btn btn-lg btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile

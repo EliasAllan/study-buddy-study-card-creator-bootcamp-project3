@@ -1,6 +1,18 @@
 [
   {
-    "deckTitle": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
+    "deckTitle": "Typedef",
     "deckAuthor": "Brian Kernighan"
+  },
+  {
+    "deckTitle": "GraphQL ",
+    "deckAuthor": "Brian Hoy"
+  },
+  {
+    "deckTitle": "MERN",
+    "deckAuthor": "Aretha Minoy"
+  },
+  {
+    "deckTitle": "CSS",
+    "deckAuthor": "Joe Harbor"
   }
 ]
