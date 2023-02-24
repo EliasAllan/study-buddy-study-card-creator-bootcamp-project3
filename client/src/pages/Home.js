@@ -1,15 +1,15 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
+import DeckList from '../components/DeckList';
+import DeckForm from '../components/DeckForm';
 
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_DECKS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
-
+  const { loading, data } = useQuery(QUERY_DECKS);
+  const decks = data?.decks || [];
+  console.log(data)
   return (
     <main>
       <div className="flex-row justify-center">
@@ -20,9 +20,9 @@ const Home = () => {
          {loading ? (
             <div>Loading...</div>
           ) : (
-            <ThoughtList
+            <DeckList
             title="This will be a list of all the decks..."
-            thoughts={thoughts}
+            decks={decks}
             />
           )}
         </div>

@@ -12,12 +12,15 @@ const Header = () => {
   };
   return (
     <header>
+      <Link 
+      to="/">     
       <img
         className="study-buddy-logo"
         src={logo}
         alt="study-buddy-logo"
         width="100%"
       />
+      </Link>
       
   
       <nav id="navbar">

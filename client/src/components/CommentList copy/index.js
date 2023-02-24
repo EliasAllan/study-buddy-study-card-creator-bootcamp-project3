@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CommentList = ({ comments = [] }) => {
-  if (!comments.length) {
-    return <h3>No Comments Yet</h3>;
+const CardList = ({ cards = [] }) => {
+  if (!cards.length) {
+    return <h3>No Cards Yet</h3>;
   }
 
   return (
@@ -11,20 +11,20 @@ const CommentList = ({ comments = [] }) => {
         className="p-5"
         style={{ border: '1px dotted #1a1a1a' }}
       >
-        The comments will be the cards later, and they will go inside the decks box
+        The cards will be the cards later, and they will go inside the decks box
       </h3>
       <div className="flex-row my-4">
-        {comments &&
-          comments.map((comment) => (
-            <div key={comment._id} className="col-12 mb-3 pb-3">
+        {cards &&
+          cards.map((card) => (
+            <div key={card._id} className="col-12 mb-3 pb-3">
               <div className="p-3 bg-dark text-light">
                 <h5 className="card-header">
-                  {comment.commentAuthor} commented{' '}
+                  {card.cardAuthor} carded{' '}
                   <span style={{ fontSize: '0.825rem' }}>
-                    on {comment.createdAt}
+                    on {card.createdAt}
                   </span>
                 </h5>
-                <p className="card-body ">{comment.commentText}</p>
+                <p className="card-body ">{card.cardText}</p>
               </div>
             </div>
           ))}
@@ -33,4 +33,4 @@ const CommentList = ({ comments = [] }) => {
   );
 };
 
-export default CommentList;
+export default CardList;
