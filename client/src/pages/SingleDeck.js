@@ -11,11 +11,11 @@ import { QUERY_SINGLE_DECK } from '../utils/queries';
 
 const SingleDeck = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
-  const { thoughtId } = useParams();
+  const { deckId } = useParams();
 
   const { loading, data } = useQuery(QUERY_SINGLE_DECK, {
     // pass URL parameter
-    variables: { thoughtId: thoughtId },
+    variables: { deckId: deckId },
   });
 
   const deck = data?.deck || {};
