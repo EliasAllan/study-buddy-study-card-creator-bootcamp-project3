@@ -8,7 +8,7 @@ import { QUERY_DECKS, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 const DeckForm = () => {
-  const [deckText, setDeckText] = useState('');
+  const [deckTitle, setDeckTitle] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -40,12 +40,12 @@ const DeckForm = () => {
     try {
       const { data } = await addDeck({
         variables: {
-          deckText,
+          deckTitle,
           deckAuthor: Auth.getProfile().data.username,
         },
       });
 
-      setDeckText('');
+      setDeckTitle('');
     } catch (err) {
       console.error(err);
     }
@@ -54,8 +54,8 @@ const DeckForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'deckText' && value.length <= 280) {
-      setDeckText(value);
+    if (name === 'deckTitle' && value.length <= 280) {
+      setDeckTitle(value);
       setCharacterCount(value.length);
     }
   };
@@ -79,9 +79,9 @@ const DeckForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="deckText"
+                name="deckTitle"
                 placeholder="Here's a new deck..."
-                value={deckText}
+                value={deckTitle}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
