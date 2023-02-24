@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const deckSchema = new Schema({
-  deckText: {
+  deckTitle: {
     type: String,
     required: 'You need to leave a deck!',
     minlength: 1,

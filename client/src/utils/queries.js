@@ -8,7 +8,7 @@ export const QUERY_USER = gql`
       email
       decks {
         _id
-        deckText
+        deckTitle
         createdAt
       }
     }
@@ -19,7 +19,7 @@ export const QUERY_DECKS = gql`
   query getDecks {
     decks {
       _id
-      deckText
+      deckTitle
       deckAuthor
       createdAt
     }
@@ -30,7 +30,7 @@ export const QUERY_SINGLE_DECK = gql`
   query getSingleDeck($deckId: ID!) {
     deck(deckId: $deckId) {
       _id
-      deckText
+      deckTitle
       deckAuthor
       createdAt
       cards {
@@ -51,7 +51,7 @@ export const QUERY_ME = gql`
       email
       decks {
         _id
-        deckText
+        deckTitle
         deckAuthor
         createdAt
       }

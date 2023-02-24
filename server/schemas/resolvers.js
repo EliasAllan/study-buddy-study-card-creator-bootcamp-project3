@@ -48,11 +48,11 @@ const resolvers = {
 
       return { token, user };
     },
-    addDeck: async (parent, { deckText }, context) => {
-      console.log(deckText)
+    addDeck: async (parent, { deckTitle }, context) => {
+      console.log(deckTitle)
       if (context.user) {
         const deck = await Deck.create({
-          deckText,
+          deckTitle,
           deckAuthor: context.user.username,
         });
 
