@@ -13,10 +13,15 @@ const DeckList = ({
 
   return (
     <div >
+      {/* new code to put the decks on rows
+      <div className="container my-4">
+       <div className="row"> */}
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
-          <div key={deck._id} className="card mb-3" >
+        <div key={deck._id} className="card mb-3" >
+        {/* new code to put the decks on rows
+        <div key={deck._id} className="card col-lg-4 mb-3" > */}
             <h4 className="card-header bg-info text-light p-2 m-0">
               {showUsername ? (
                 <Link
@@ -49,6 +54,7 @@ const DeckList = ({
             </Link> */}
           </div>
         ))}
+        {/* </div> */}
     </div>
   );
 };

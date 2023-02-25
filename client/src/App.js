@@ -14,8 +14,10 @@ import Login from './pages/Login';
 import SingleDeck from './pages/SingleDeck';
 import Profile from './pages/Profile';
 import Create from './pages/Create';
+import Delete from './pages/Delete'
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -76,6 +78,10 @@ function App() {
               <Route 
                 path="/create" 
                 element={<Create />}
+              /> 
+              <Route 
+                path="/delete" 
+                element={<Delete />}
               /> 
             </Routes>
           </div>
