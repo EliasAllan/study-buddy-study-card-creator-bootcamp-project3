@@ -42,7 +42,7 @@ const DeckList = ({
             </h4>
             <div className="card-body p-2 " >
               <h3>{deck.deckTitle}</h3>
-              <h4>This will be the deck description</h4>
+              <h4>{deck.deckDescription}</h4>
             </div>
             {/* Link to the listed deck. Commenting this out in the main DeckList to prevent access to other users' decks from the homepage */}
             {/* <Link

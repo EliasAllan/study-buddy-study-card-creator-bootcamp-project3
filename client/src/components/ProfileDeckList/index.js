@@ -25,27 +25,27 @@ const ProfileDeckList = ({
                 >
                   {deck.deckAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    created this deck on {deck.createdAt}
+                    You created this deck on {deck.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    created this deck on {deck.createdAt}
+                    You created this deck on {deck.createdAt}
                   </span>
                 </>
               )}
             </h4>
             <div className="card-body p-2 " >
               <h3>{deck.deckTitle}</h3>
-              <h4>This will be the deck description</h4>
+              <h4>{deck.deckDescription}</h4>
             </div>
             {/* Link to the listed deck. Commenting this out  */}
             <Link
               className="btn btn-info btn-block btn-squared"
               to={`/decks/${deck._id}`}
             >
-              Click here to see the deck
+              Click here to see and/or edit the deck.
             </Link>
           </div>
         ))}

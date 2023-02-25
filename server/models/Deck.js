@@ -9,6 +9,13 @@ const deckSchema = new Schema({
     maxlength: 280,
     trim: true,
   },
+  deckDescription: {
+    type: String,
+    // required: 'Please provide a short description of your deck.',
+    minlength: 1,
+    maxlength: 120,
+    trim: true
+  },
   deckAuthor: {
     type: String,
     required: true,
