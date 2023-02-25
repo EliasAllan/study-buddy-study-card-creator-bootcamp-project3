@@ -1,0 +1,29 @@
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#center{
+    display: flex;
+    justify-content: center;
+}
+
+.my-3{
+    border: 1px dotted rgb(26, 26, 26);
+    border-radius: 2px;
+}
+
+#deck-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-content{
+    align-items: center;
+}
+
+#study-card{
+    height:200px
+}

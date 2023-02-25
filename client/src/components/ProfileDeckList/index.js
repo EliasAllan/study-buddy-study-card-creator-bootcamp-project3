@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./deckList.css";
-const DeckList = ({
+import "./profileDeckList.css";
+const ProfileDeckList = ({
   decks, // this will be changed to decks later
   title,    // we will also need a description and a card object to be passed
   showTitle = true,
@@ -40,17 +40,17 @@ const DeckList = ({
               <h3>{deck.deckTitle}</h3>
               <h4>This will be the deck description</h4>
             </div>
-            {/* Link to the listed deck. Commenting this out in the main DeckList to prevent access to other users' decks from the homepage */}
-            {/* <Link
+            {/* Link to the listed deck. Commenting this out  */}
+            <Link
               className="btn btn-info btn-block btn-squared"
               to={`/decks/${deck._id}`}
             >
               Click here to see the deck
-            </Link> */}
+            </Link>
           </div>
         ))}
     </div>
   );
 };
 
-export default DeckList;
+export default ProfileDeckList;

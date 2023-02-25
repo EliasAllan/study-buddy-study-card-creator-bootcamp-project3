@@ -21,7 +21,7 @@ const Home = () => {
             <div>Loading...</div>
           ) : (
             <DeckList
-            title="This will be a list of all the decks..."
+            title="Studious users like you have made decks like.."
             decks={decks}
             />
           )}
