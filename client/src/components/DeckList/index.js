@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./deckList.css";
+import { Col, Row } from 'react-bootstrap';
+// import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+
 const DeckList = ({
   decks, // this will be changed to decks later
   title,    // we will also need a description and a card object to be passed
@@ -12,7 +15,9 @@ const DeckList = ({
   }
 
   return (
-    <div >
+    <div class="container">
+      <Col>
+      <Row xs={1} md={2} className="g-2">
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
@@ -49,7 +54,13 @@ const DeckList = ({
             </Link>
           </div>
         ))}
-    </div>
+          </Row>
+          </Col>
+          {/* end of the card */}
+      </div>
+    
+    
+
   );
 };
 
