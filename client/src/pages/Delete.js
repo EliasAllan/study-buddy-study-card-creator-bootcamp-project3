@@ -1,25 +1,27 @@
-import React from 'react';
-import DeckForm from '../components/DeckForm';
-import DeckList from '../components/DeckList';
+import React from "react";
+import CardForm from "../components/CardForm";
+import CardList from "../components/CardList";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Delete = () => {
-  
-    return (
-      <main>
+  const location = useLocation();
+  const navigate = useNavigate();
+  return (
+    <main>
+      <div className="flex-row justify-center mb-3">
+        <h2 className="col-12 col-md-10 bg-info text-light p-3 mb-5">
+          Your card has been removed from the deck
+        </h2>
         <div className="flex-row justify-center mb-3">
-            <h2 className="col-12 col-md-10 bg-info text-light p-3 mb-5">
-           Your card has been removed from the deck
-            </h2>
-            <div
-                className="col-12 col-md-10 mb-3 p-3"
-                style={{ border: '1px dotted #1a1a1a' }}
-            >
-                <DeckForm />
-            </div>
+          {location.pathname !== "/" && (
+            <button className="btn btn-dark mb-3" onClick={() => navigate(-1)}>
+              &larr; Return to your deck of cards
+            </button>
+          )}
         </div>
-      </main>
-    );
-  };
-  
-  export default Delete;
-  
+      </div>
+    </main>
+  );
+};
+
+export default Delete;
