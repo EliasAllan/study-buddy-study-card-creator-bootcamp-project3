@@ -13,10 +13,14 @@ const DeckList = ({
 
   return (
     <div >
+     
+       {/* <div className="container my-4">
+       <div className="row"> */}
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
-          <div key={deck._id} className="card mb-3" >
+        <div key={deck._id} className="card mb-3" >
+        {/* // <div key={deck._id} className="card col-lg-4 mb-3" > */}
             <h4 className="card-header bg-info text-light p-2 m-0">
               {showUsername ? (
                 <Link
@@ -24,7 +28,7 @@ const DeckList = ({
                   to={`/profiles/${deck.deckAuthor}`}
                 >
                   {deck.deckAuthor} <br />
-                  <span style={{ fontSize: '1rem' }}>
+                  <span style={{ fontSize: '1rem'}}>
                     created this deck on {deck.createdAt}
                   </span>
                 </Link>
@@ -49,6 +53,7 @@ const DeckList = ({
             </Link> */}
           </div>
         ))}
+        {/* </div> */}
     </div>
   );
 };

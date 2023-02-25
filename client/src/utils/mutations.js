@@ -54,3 +54,12 @@ export const ADD_CARD = gql`
     }
   }
 `;
+
+// export const REMOVE_CARD = gql`
+//   mutation removeCard($deckId: ID!, $cardId: ID!) {
+//     removeCard(deckId: $deckId, cardId: $cardId) {
+     
+//   }
+// `;
+
+
