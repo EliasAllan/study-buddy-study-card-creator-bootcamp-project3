@@ -20,6 +20,7 @@ export const QUERY_DECKS = gql`
     decks {
       _id
       deckTitle
+      deckDescription
       deckAuthor
       createdAt
     }
@@ -31,6 +32,7 @@ export const QUERY_SINGLE_DECK = gql`
     deck(deckId: $deckId) {
       _id
       deckTitle
+      deckDescription
       deckAuthor
       createdAt
       cards {

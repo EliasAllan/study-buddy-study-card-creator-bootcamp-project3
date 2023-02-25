@@ -1,18 +1,22 @@
 [
   {
     "deckTitle": "Typedef",
-    "deckAuthor": "Brian Kernighan"
+    "deckAuthor": "Brian Kernighan",
+    "deckDescription": "I sure love typedef!"
   },
   {
-    "deckTitle": "GraphQL ",
-    "deckAuthor": "Brian Hoy"
+    "deckTitle": "GraphQL",
+    "deckAuthor": "Brian Hoy",
+    "deckDescription": "How does Doodlebob fit into GraphQL?"
   },
   {
     "deckTitle": "MERN",
-    "deckAuthor": "Aretha Minoy"
+    "deckAuthor": "Aretha Minoy",
+    "deckDescription": "Ah yes.. MERN.. a lovely vintage."
   },
   {
     "deckTitle": "CSS",
-    "deckAuthor": "Joe Harbor"
+    "deckAuthor": "Joe Harbor",
+    "deckDescription": "Graphic design is my passion."
   }
 ]
