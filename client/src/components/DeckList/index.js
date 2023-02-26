@@ -13,14 +13,10 @@ const DeckList = ({
 
   return (
     <div >
-     
-       {/* <div className="container my-4">
-       <div className="row"> */}
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
         <div key={deck._id} className="card mb-3" >
-        {/* // <div key={deck._id} className="card col-lg-4 mb-3" > */}
             <h4 className="card-header bg-info text-light p-2 m-0">
               {showUsername ? (
                 <Link
@@ -44,16 +40,8 @@ const DeckList = ({
               <h3>{deck.deckTitle}</h3>
               <h4>{deck.deckDescription}</h4>
             </div>
-            {/* Link to the listed deck. Commenting this out in the main DeckList to prevent access to other users' decks from the homepage */}
-            {/* <Link
-              className="btn btn-info btn-block btn-squared"
-              to={`/decks/${deck._id}`}
-            >
-              Click here to see the deck
-            </Link> */}
           </div>
         ))}
-        {/* </div> */}
     </div>
   );
 };
