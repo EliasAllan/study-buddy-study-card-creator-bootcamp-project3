@@ -51,9 +51,6 @@ const DeckList = ({
           </Col>
           {/* end of the card */}
       </div>
-    
-    
-
   );
 };
 
