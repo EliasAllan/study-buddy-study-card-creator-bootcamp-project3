@@ -40,7 +40,6 @@ const ProfileDeckList = ({
               <h3>{deck.deckTitle}</h3>
               <h4>{deck.deckDescription}</h4>
             </div>
-            {/* Link to the listed deck. Commenting this out  */}
             <Link
               className="btn btn-info btn-block btn-squared"
               to={`/decks/${deck._id}`}
