@@ -10,6 +10,9 @@ import Auth from '../../utils/auth';
 const DeckForm = () => {
   const [deckTitle, setDeckTitle] = useState('');
 
+  // Gonna need this for setting the description - just scoping requirements at the moment.
+  // const [deckDescription, setDeckDescription] = useState('');
+
   const [characterCount, setCharacterCount] = useState(0);
 
   const [addDeck, { error }] = useMutation(ADD_DECK, {
@@ -25,7 +28,7 @@ const DeckForm = () => {
         console.error(e);
       }
 
-      // update me object's cache
+      //update me object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
@@ -77,11 +80,23 @@ const DeckForm = () => {
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
+            {/* This textarea captures the new deck's title. */}
             <div className="col-12 col-lg-9">
               <textarea
                 name="deckTitle"
-                placeholder="Here's a new deck..."
+                placeholder="My new deck's title is.."
                 value={deckTitle}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            {/* This textarea is going to capture the new deck's description but doesn't work yet. */}
+            <div className="col-12 col-lg-9">
+              <textarea
+                name="deckDescription"
+                placeholder="A brief description of this deck would be.. (not in use yet)"
+                // value={deckDescription}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}

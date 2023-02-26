@@ -1,5 +1,8 @@
 const { gql } = require('apollo-server-express');
 
+// Once the form for new deck creation is ready to capture deckDescription the mutation for addDeck on line 47 should read:
+// addDeck(deckTitle: String!, deckDescription: String!): Deck
+
 const typeDefs = gql`
   type User {
     _id: ID
@@ -12,6 +15,7 @@ const typeDefs = gql`
   type Deck {
     _id: ID
     deckTitle: String
+    deckDescription: String
     deckAuthor: String
     createdAt: String
     cards: [Card]!
