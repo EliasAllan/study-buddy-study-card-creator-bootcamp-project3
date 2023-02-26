@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./header.css";
-import logo from "../../assets/studdy-buddy-logo.jpeg";
+import logo from "../../assets/study-buddy-logo.jpeg";
 
 import Auth from "../../utils/auth";
 
