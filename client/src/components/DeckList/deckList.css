@@ -24,9 +24,11 @@
     height:200px
 }
 
-.card {
-    display: inline-flex;
+#card-1 {
     height: 12rem;
     width: 60rem;
     resize: both;
+    white-space: nowrap;      /*keep the text on one line*/
+    overflow: hidden;         /*prevent the text from being shown outside the border*/
+    text-overflow: ellipsis;  /*cut off text with an elipsis*/
 }
