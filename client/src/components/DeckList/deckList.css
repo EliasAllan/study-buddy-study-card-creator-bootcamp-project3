@@ -9,12 +9,8 @@
     justify-content: center;
 }
 
-.my-3{
-    border: 1px dotted rgb(26, 26, 26);
-    border-radius: 2px;
-}
 
-#deck-header{
+#card-header{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,4 +22,11 @@
 
 #study-card{
     height:200px
+}
+
+.card {
+    display: inline-flex;
+    height: 12rem;
+    width: 60rem;
+    resize: both;
 }

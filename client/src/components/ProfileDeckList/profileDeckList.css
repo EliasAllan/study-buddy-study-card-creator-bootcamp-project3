@@ -1,5 +1,5 @@
 .card-body{
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
 }
@@ -10,8 +10,7 @@
 }
 
 .my-3{
-    border: 1px dotted rgb(26, 26, 26);
-    border-radius: 2px;
+    border: 2px dashed black;
 }
 
 #deck-header{
@@ -25,5 +24,11 @@
 }
 
 #study-card{
-    height:200px
+    height: 200px;
+}
+
+.card {
+    /* put decks side by side */
+    display: inline-block;
+    margin: 5px;
 }
