@@ -22,7 +22,7 @@ const typeDefs = gql`
   }
 
   type Card {
-    _id: ID
+    cardId: ID
     cardText: String
     cardAuthor: String
     createdAt: String

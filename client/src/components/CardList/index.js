@@ -1,11 +1,33 @@
 import React from "react";
-import {Link } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "./cardList.css";
+import { useMutation } from '@apollo/client';
+import { REMOVE_CARD } from '../../utils/mutations';
 
-const CardList = ({ cards = [] }) => {
+const CardList = ({ cards = [], deckId }) => {
+  const navigate = useNavigate();
+  const [removeCard, { error }] = useMutation(REMOVE_CARD);
   if (!cards.length) {
     return <h3>No Cards Yet</h3>;
-  }
+  };
+
+  const handleDeleteCard = async (event) => {
+    event.preventDefault();
+
+    try {
+      console.log(event.target.value)
+      const { data } = await removeCard({
+        variables: {
+          deckId,
+          cardId:event.target.value
+        },
+      });
+      navigate('/delete');
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
 
   return (
     <>
@@ -13,15 +35,13 @@ const CardList = ({ cards = [] }) => {
         <div className="row">
         {cards &&
           cards.map((card) => (
-            <div key={card._id} className="col-sm-4 mb-3">
+            <div key={card.cardId} className="col-sm-4 mb-3">
               <div id="study-card" className=" bg-info text-light">
-              
-
-              <Link className="btn btn-lg btn-info m-2" to="/delete">
-               <div className="icon bg-info">
-               <i class="fa-regular fa-x"></i>
+                <button className="btn btn-lg btn-info m-2" value={card.cardId} onClick={handleDeleteCard}>
+                <div className="icon bg-info">
+                <i class="fa-solid fa-trash-can"></i>
                </div> 
-              </Link> 
+                </button>
             
                 <h2 id="card-content" className="flex-column">{card.cardText}</h2>
                 

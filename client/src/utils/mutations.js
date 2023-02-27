@@ -32,7 +32,7 @@ export const ADD_DECK = gql`
       deckAuthor
       createdAt
       cards {
-        _id
+        cardId
         cardText
       }
     }
@@ -47,7 +47,7 @@ export const ADD_CARD = gql`
       deckAuthor
       createdAt
       cards {
-        _id
+        cardId
         cardText
         createdAt
       }
@@ -55,11 +55,16 @@ export const ADD_CARD = gql`
   }
 `;
 
-// export const REMOVE_CARD = gql`
-//   mutation removeCard($deckId: ID!, $cardId: ID!) {
-//     removeCard(deckId: $deckId, cardId: $cardId) {
-     
-//   }
-// `;
 
-
+export const REMOVE_CARD = gql`
+  mutation removeCard($deckId: ID!, $cardId: ID!) {
+    removeCard(deckId: $deckId, cardId: $cardId) {
+      _id
+      deckTitle
+      deckAuthor
+      createdAt
+      cards {
+        cardId
+      }
+    }
+  }`

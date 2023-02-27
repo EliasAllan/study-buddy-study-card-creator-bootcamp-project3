@@ -34,7 +34,7 @@ const SingleDeck = () => {
       </h3>
       <div className="py-4">
       <div className="my-5">
-        <CardList cards={deck.cards} />
+        <CardList cards={deck.cards} deckId={deck._id} />
       </div>
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
