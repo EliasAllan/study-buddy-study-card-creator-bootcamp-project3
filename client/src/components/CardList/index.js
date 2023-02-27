@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "./cardList.css";
 import { useMutation } from '@apollo/client';
 import { REMOVE_CARD } from '../../utils/mutations';
@@ -37,10 +37,9 @@ const CardList = ({ cards = [], deckId }) => {
           cards.map((card) => (
             <div key={card.cardId} className="col-sm-4 mb-3">
               <div id="study-card" className=" bg-info text-light">
-
                 <button className="btn btn-lg btn-info m-2" value={card.cardId} onClick={handleDeleteCard}>
                 <div className="icon bg-info">
-               <i class="fa-regular fa-x"></i>
+                <i class="fa-solid fa-trash-can"></i>
                </div> 
                 </button>
             
