@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./profileDeckList.css";
+
 const ProfileDeckList = ({
   decks, // this will be changed to decks later
   title,    // we will also need a description and a card object to be passed
@@ -8,7 +9,7 @@ const ProfileDeckList = ({
   showUsername = true,
 }) => {
   if (!decks.length) {
-    return <h3>You haven't created any cards yet</h3>;
+    return <h3>You haven't created any cards yet</h3>
   }
 
   return (
@@ -38,7 +39,7 @@ const ProfileDeckList = ({
             </h4>
             <div className="card-body p-2 " >
               <h3 id="center">{deck.deckTitle}</h3>
-              <h4>{deck.deckDescription}</h4>
+              <h4 id="card-2">{deck.deckDescription}</h4>
             </div>
             <Link
               className="btn btn-info btn-block btn-squared"

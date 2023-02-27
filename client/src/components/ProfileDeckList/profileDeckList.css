@@ -28,7 +28,12 @@
 }
 
 .card {
-    /* put decks side by side */
-    display: inline-block;
+    display: inline-block; /* put decks side by side */
     margin: 5px;
+}
+
+h3 {
+    white-space: nowrap;     
+    overflow: hidden;  
+    text-overflow: ellipsis ellipsis;
 }
