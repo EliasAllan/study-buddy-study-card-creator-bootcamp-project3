@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import "./profileDeckList.css";
 
 const ProfileDeckList = ({
-  decks, // this will be changed to decks later
-  title,    // we will also need a description and a card object to be passed
+  decks,
+  title,
   showTitle = true,
   showUsername = true,
 }) => {

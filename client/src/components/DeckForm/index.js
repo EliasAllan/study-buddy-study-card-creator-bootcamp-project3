@@ -9,6 +9,7 @@ import Auth from '../../utils/auth';
 
 const DeckForm = () => {
   const [deckTitle, setDeckTitle] = useState('');
+  const [deckDescription, setDeckDescription] = useState('');
 
   // Gonna need this for setting the description - just scoping requirements at the moment.
   // const [deckDescription, setDeckDescription] = useState('');
@@ -44,6 +45,7 @@ const DeckForm = () => {
       const { data } = await addDeck({
         variables: {
           deckTitle,
+          deckDescription,
           deckAuthor: Auth.getProfile().data.username,
         },
       });
@@ -59,6 +61,11 @@ const DeckForm = () => {
 
     if (name === 'deckTitle' && value.length <= 280) {
       setDeckTitle(value);
+      setCharacterCount(value.length);
+    }
+
+    if (name === 'deckDescription' && value.length <= 280) {
+      setDeckDescription(value);
       setCharacterCount(value.length);
     }
   };
@@ -96,7 +103,7 @@ const DeckForm = () => {
               <textarea
                 name="deckDescription"
                 placeholder="A brief description of this deck would be.. (not in use yet)"
-                // value={deckDescription}
+                value={deckDescription}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
