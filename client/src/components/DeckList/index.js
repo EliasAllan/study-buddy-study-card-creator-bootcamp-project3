@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./deckList.css";
-import { Col, Row } from 'react-bootstrap';
-// import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
 
 const DeckList = ({
   decks, // this will be changed to decks later
@@ -16,8 +14,7 @@ const DeckList = ({
 
   return (
     <div class="container">
-      <Col>
-      <Row xs={1} md={2} className="g-2">
+      <div class="row">
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
@@ -47,9 +44,7 @@ const DeckList = ({
             </div>
           </div>
         ))}
-          </Row>
-          </Col>
-          {/* end of the card */}
+        </div>
       </div>
   );
 };

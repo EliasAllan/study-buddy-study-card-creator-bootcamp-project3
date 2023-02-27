@@ -12,11 +12,11 @@ const ProfileDeckList = ({
   }
 
   return (
-    <div >
+    <div className="card-container">
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
-          <div key={deck._id} className="card mb-3" >
+          <div key={deck._id} className="card mb-3" style={({ width: "19rem"})} >
             <h4 className="card-header bg-info text-light p-2 m-0">
               {showUsername ? (
                 <Link
@@ -37,7 +37,7 @@ const ProfileDeckList = ({
               )}
             </h4>
             <div className="card-body p-2 " >
-              <h3>{deck.deckTitle}</h3>
+              <h3 id="center">{deck.deckTitle}</h3>
               <h4>{deck.deckDescription}</h4>
             </div>
             <Link
