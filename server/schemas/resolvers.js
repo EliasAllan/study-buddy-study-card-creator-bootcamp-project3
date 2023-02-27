@@ -105,7 +105,7 @@ const resolvers = {
           {
             $pull: {
               cards: {
-                _id: cardId,
+                cardId: cardId,
                 cardAuthor: context.user.username,
               },
             },

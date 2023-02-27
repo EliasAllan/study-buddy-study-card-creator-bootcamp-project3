@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const deckSchema = new Schema({
@@ -28,6 +28,10 @@ const deckSchema = new Schema({
   },
   cards: [
     {
+    cardId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId(),
+      },
       cardText: {
         type: String,
         required: true,

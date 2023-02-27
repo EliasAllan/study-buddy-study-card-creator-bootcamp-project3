@@ -36,7 +36,7 @@ export const QUERY_SINGLE_DECK = gql`
       deckAuthor
       createdAt
       cards {
-        _id
+        cardId
         cardText
         cardAuthor
         createdAt
