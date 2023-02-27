@@ -9,12 +9,12 @@ const CardList = ({ cards = [] }) => {
 
   return (
     <>
-      <div className="container my-4" >
+      <div className="container">
         <div className="row">
         {cards &&
           cards.map((card) => (
-            <div key={card._id} className="col-sm-4 mb-3 pb-3">
-              <div id="study-card" className="p-3 bg-info text-light">
+            <div key={card._id} className="col-sm-4 mb-3">
+              <div id="study-card" className=" bg-info text-light">
               
 
               <Link className="btn btn-lg btn-info m-2" to="/delete">

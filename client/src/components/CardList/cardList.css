@@ -6,14 +6,15 @@
     color:white;
 }
 
-#card-content{
-    flex-wrap: wrap;
+.fa-x:active {
+    color: black;
+}
+
+.container {
+    flex-wrap: nowrap;
 }
 
 #study-card {
-    width: 100%;
-    height: 200px;
     overflow: auto;
-    position: relative;     
     word-break: break-word;
 }
