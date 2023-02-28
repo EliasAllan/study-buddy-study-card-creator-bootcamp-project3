@@ -12,6 +12,7 @@
 
 .container {
     flex-wrap: nowrap;
+    border-radius: 20px;
 }
 
 #study-card {
@@ -21,4 +22,8 @@
 
 h3{
     text-align: center;
+}
+
+.del-btn{
+    border-radius: 20px;
 }

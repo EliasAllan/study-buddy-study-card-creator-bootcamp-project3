@@ -27,7 +27,7 @@ const Header = () => {
         
           {Auth.loggedIn() ? (
             <>
-              <Link className=" btn btn-lg btn-info m-2 " to="/create">
+              <Link className="navitem btn btn-lg btn-info m-2 " to="/create">
                 <i className="solid fa-plus"> Create new deck</i>
               </Link>
               <Link className=" navitem btn btn-lg btn-info m-2" to="/me">

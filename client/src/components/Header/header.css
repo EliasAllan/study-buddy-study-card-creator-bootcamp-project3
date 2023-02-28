@@ -18,3 +18,7 @@ width: 200px;
     margin-top: 40px;
     flex-direction: row;
   }
+
+  .navitem{
+    border-radius: 20px;
+  }

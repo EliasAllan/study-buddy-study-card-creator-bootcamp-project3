@@ -14,12 +14,12 @@ const ProfileDeckList = ({
   }
 
   return (
-    <div className="card-container">
+    <div className="card-container" >
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
-          <div key={deck._id} className="card mb-3" style={({ width: "19rem"})} >
-            <h4 className="card-header bg-info text-light p-2 m-0">
+          <div key={deck._id} id="deck" className="deck card mb-3" style={({ width: "19rem"})} >
+            <h4 id="deck-header" className="deck card-header bg-info ">
               {showUsername ? (
                 <Link
                   className="text-light"
@@ -43,7 +43,8 @@ const ProfileDeckList = ({
               <h4 id="">{deck.deckDescription}</h4>
             </div>
             <Link
-              className="btn btn-info btn-block btn-squared"
+              id="deck-footer"
+              className="btn btn-info btn-block "
               to={`/decks/${deck._id}`}
             >
               Click here to see and/or edit the deck.
