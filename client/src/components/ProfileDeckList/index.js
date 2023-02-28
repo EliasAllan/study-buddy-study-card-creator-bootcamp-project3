@@ -39,7 +39,7 @@ const ProfileDeckList = ({
             </h4>
             <div className="card-body p-2 " >
               <h3 id="center">{deck.deckTitle}</h3>
-              <h4 id="card-2">{deck.deckDescription}</h4>
+              <h4 id="center">{deck.deckDescription}</h4>
             </div>
             <Link
               className="btn btn-info btn-block btn-squared"

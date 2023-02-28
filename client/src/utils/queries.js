@@ -9,6 +9,7 @@ export const QUERY_USER = gql`
       decks {
         _id
         deckTitle
+        deckDescription
         createdAt
       }
     }
@@ -54,6 +55,7 @@ export const QUERY_ME = gql`
       decks {
         _id
         deckTitle
+        deckDescription
         deckAuthor
         createdAt
       }
