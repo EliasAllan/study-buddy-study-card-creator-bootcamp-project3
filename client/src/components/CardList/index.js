@@ -3,12 +3,13 @@ import {useNavigate } from "react-router-dom";
 import "./cardList.css";
 import { useMutation } from '@apollo/client';
 import { REMOVE_CARD } from '../../utils/mutations';
+import DeckForm from "../DeckForm";
 
 const CardList = ({ cards = [], deckId }) => {
   const navigate = useNavigate();
   const [removeCard, { error }] = useMutation(REMOVE_CARD);
   if (!cards.length) {
-    return <h3>No Cards Yet</h3>;
+    return <h3 id="center">No Cards Yet</h3>;
   };
 
   const handleDeleteCard = async (event) => {
@@ -42,7 +43,7 @@ const CardList = ({ cards = [], deckId }) => {
                 <i class="fa-solid fa-trash-can"></i>
                </div> 
                 </button>
-            
+
                 <h2 id="card-content" className="flex-column">{card.cardText}</h2>
                 
               </div>
