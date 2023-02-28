@@ -46,25 +46,16 @@ This application is covered by the MIT license
 
 ## Contributors
   - [Allan Elias](https://github.com/EliasAllan)
+    - allanrnelias@gmail.com
   - [Matt Goldsmith](https://github.com/chocochip287)
   - [Nayonna Purnell](https://github.com/nayonnapurnell)
+    - LinkedIn: https://www.linkedin.com/in/nayonnapurnell/
   - [Saad Anwar](https://github.com/SaadYousafi87)
   - [Susan Lee](https://github.com/s-s-lee/)
+    - sohzahn@gmail.com
+    - LinkedIn: https://www.linkedin.com/in/susan-l-9074b523b/ 
   - [Thaivy Tran](https://github.com/ThaivyTran)
 
-or
-Email or contact one of us on GitHub to discuss collaboration!
-
-Allan Elias:
-allanrnelias@gmail.com
-
-Nayonna Purnell: 
-LinkedIn: https://www.linkedin.com/in/nayonnapurnell/    
-GitHub: https://github.com/nayonnapurnell
-
-Susan Lee:
-sohzahn@gmail.com
-LinkedIn: https://www.linkedin.com/in/susan-l-9074b523b/ 
 
 (need to add other emails here, feel free to add and push)
 
