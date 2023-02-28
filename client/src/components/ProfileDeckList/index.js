@@ -7,9 +7,10 @@ const ProfileDeckList = ({
   title,
   showTitle = true,
   showUsername = true,
-}) => {
+}) => 
+{
   if (!decks.length) {
-    return <h3>You haven't created any cards yet</h3>
+    return <h3>You haven't created any decks yet</h3>
   }
 
   return (
