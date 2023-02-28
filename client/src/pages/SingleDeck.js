@@ -26,10 +26,10 @@ const SingleDeck = () => {
   return (
     <div className="my-3">
       <h3 id="deck-header" className="bg-info text-light p-2 m-0">
-        <h2>deck title will go here</h2>
+        <h2>{deck.deckTitle}</h2>
         
         <span style={{ fontSize: '1rem' }}>
-        {deck.deckAuthor} created this deck on {deck.createdAt}
+        You created this deck on {deck.createdAt}.
         </span>
       </h3>
       <div className="py-4">
