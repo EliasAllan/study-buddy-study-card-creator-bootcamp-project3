@@ -37,3 +37,7 @@ h3 {
     overflow: hidden;  
     text-overflow: ellipsis ellipsis;
 }
+
+h4 {
+   text-align: center;
+}
