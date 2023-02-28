@@ -7,6 +7,19 @@ https://opensource.org/licenses/MIT
 ## Description 
 This is a website where you can create and save your own study card/notes. It is designed to help students have an easy access and way to store their notes.
 
+## Table of contents
+- [Study Buddy](#study-buddy)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Technologies](#technologies)
+  - [Usage](#usage)
+  - [Tests](#tests)
+  - [License](#license)
+  - [Contributors](#contributors)
+  - [Application Screenshot](#application-screenshot)
+  - [Table of contents](#table-of-contents)
+  - [Link to deployed application](#link-to-deployed-application)
+
 ## Installation  
 ```md
 Run npm i
@@ -25,33 +38,36 @@ Run npm run develop to start
 Make sure to sign up first clicking the signup button, then click the create deck button to create you first study deck ! Input a title and a description, then click submit.
 Select the deck you want to add to/delete from in your profile page, then follow the prompts to create new cards to your deck.
 
-## Contributors
-Email or contact one of the us on GitHub to discuss collaboration !
-
-Nayonna Purnell: 
-LinkedIn: https://www.linkedin.com/in/nayonnapurnell/    
-GitHub: https://github.com/nayonnapurnell
-
 ## Tests
 No tests were designed for this website
 
 ## License
 This application is covered by the MIT license
 
-## Questions
+## Contributors
   - [Allan Elias](https://github.com/EliasAllan)
   - [Matt Goldsmith](https://github.com/chocochip287)
-  - [Nayonna Purnel](https://github.com/nayonnapurnell)
+  - [Nayonna Purnell](https://github.com/nayonnapurnell)
   - [Saad Anwar](https://github.com/SaadYousafi87)
   - [Susan Lee](https://github.com/s-s-lee/)
   - [Thaivy Tran](https://github.com/ThaivyTran)
 
 or
+Email or contact one of us on GitHub to discuss collaboration!
 
-E-mail us at: 
-allanrnelias@gmail.com ...
+Allan Elias:
+allanrnelias@gmail.com
+
+Nayonna Purnell: 
+LinkedIn: https://www.linkedin.com/in/nayonnapurnell/    
+GitHub: https://github.com/nayonnapurnell
+
+Susan Lee:
+sohzahn@gmail.com
+LinkedIn: https://www.linkedin.com/in/susan-l-9074b523b/ 
 
 (need to add other emails here, feel free to add and push)
+
 
 ## Application Screenshot
 Homepage
@@ -62,20 +78,6 @@ Decks page
 ![ The picture of the decks page](/assets/decks.png)
 Deck form page
 ![ The picture of the deck form page](/assets/deck-form.png)
-
-## Table of contents
-- [Study Buddy](#study-buddy)
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Technologies](#technologies)
-  - [Usage](#usage)
-  - [Contributors](#contributors)
-  - [Tests](#tests)
-  - [License](#license)
-  - [Questions](#questions)
-  - [Application Screenshot](#application-screenshot)
-  - [Table of contents](#table-of-contents)
-  - [Link to deployed application](#link-to-deployed-application)
 
 ## Link to deployed application
 
