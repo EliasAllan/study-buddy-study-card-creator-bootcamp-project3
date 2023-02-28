@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
+import "./deckForm.css";
 import { ADD_DECK } from '../../utils/mutations';
 import { QUERY_DECKS, QUERY_ME } from '../../utils/queries';
 

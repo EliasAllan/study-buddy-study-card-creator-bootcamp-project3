@@ -34,3 +34,8 @@
     text-overflow: ellipsis;  /*cut off text with an elipsis*/
     border-radius: 20px;
 }
+
+#deck-container{
+    border-radius: 20px;
+ 
+}

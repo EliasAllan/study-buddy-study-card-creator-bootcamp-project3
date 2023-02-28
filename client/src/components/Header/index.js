@@ -42,10 +42,10 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className=" btn btn-lg btn-info mr-5 " to="/login">
+              <Link className="navitem btn btn-lg btn-info mr-5 " to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light mr-5  " to="/signup">
+              <Link className="navitem btn btn-lg btn-light mr-5  " to="/signup">
                 Signup
               </Link>
             </>
