@@ -50,6 +50,7 @@ const Profile = () => {
           <ProfileDeckList
             decks={user.decks}
             title={`${user.username}'s decks...`}
+            // description={user.decks.deckDescription}
             showTitle={false}
             showUsername={false}
           />
