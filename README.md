@@ -25,8 +25,12 @@ Run npm run develop to start
 Make sure to sign up first clicking the signup button, then click the create deck button to create you first study deck ! Input a title and a description, then click submit.
 Select the deck you want to add to/delete from in your profile page, then follow the prompts to create new cards to your deck.
 
-## Contributing 
+## Contributors
 Email or contact one of the us on GitHub to discuss collaboration !
+
+Nayonna Purnell: 
+LinkedIn: https://www.linkedin.com/in/nayonnapurnell/    
+GitHub: https://github.com/nayonnapurnell
 
 ## Tests
 No tests were designed for this website
@@ -60,13 +64,18 @@ Deck form page
 ![ The picture of the deck form page](/assets/deck-form.png)
 
 ## Table of contents
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [License](#license)
-- [Questions](#questions)
+- [Study Buddy](#study-buddy)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Technologies](#technologies)
+  - [Usage](#usage)
+  - [Contributors](#contributors)
+  - [Tests](#tests)
+  - [License](#license)
+  - [Questions](#questions)
+  - [Application Screenshot](#application-screenshot)
+  - [Table of contents](#table-of-contents)
+  - [Link to deployed application](#link-to-deployed-application)
 
 ## Link to deployed application
 
