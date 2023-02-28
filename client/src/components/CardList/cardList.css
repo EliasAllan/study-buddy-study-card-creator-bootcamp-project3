@@ -12,9 +12,23 @@
 
 .container {
     flex-wrap: nowrap;
+    border-radius: 20px;
 }
 
 #study-card {
     overflow: auto;
     word-break: break-word;
+}
+
+h3{
+    text-align: center;
+}
+
+.del-btn{
+    border-radius: 20px;
+}
+
+#greetings{
+    border-radius: 20px;
+
 }
