@@ -1,3 +1,9 @@
+/**
+ * This callback function takes date object as argument,
+ * and return it as a String.
+ * @param {object} date 
+ * @returns string
+ */
 const addDateSuffix = (date) => {
   let dateStr = date.toString();
 
