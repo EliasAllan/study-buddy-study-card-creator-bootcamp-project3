@@ -55,7 +55,7 @@ This application is covered by the MIT license
     - sohzahn@gmail.com
     - LinkedIn: https://www.linkedin.com/in/susan-l-9074b523b/ 
   - [Thaivy Tran](https://github.com/ThaivyTran)
-    - tran.thaivy1997gmail.com
+    - tran.thaivy1997@gmail.com
 
 
 (need to add other emails here, feel free to add and push)
