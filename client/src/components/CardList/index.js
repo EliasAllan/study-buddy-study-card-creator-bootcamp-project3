@@ -6,6 +6,7 @@ import { REMOVE_CARD } from '../../utils/mutations';
 import DeckForm from "../DeckForm";
 
 const CardList = ({ cards = [], deckId }) => {
+  const [isFullscreen, setIsFullscreen] = React.useState(false);
   const navigate = useNavigate();
   const [removeCard, { error }] = useMutation(REMOVE_CARD);
   if (!cards.length) {
