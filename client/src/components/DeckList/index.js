@@ -7,7 +7,8 @@ const DeckList = ({
   title,    // we will also need a description and a card object to be passed
   showTitle = true,
   showUsername = true,
-}) => {
+}) => 
+{
   if (!decks.length) {
     return <h3>You haven't created any cards yet</h3>;
   }
@@ -30,6 +31,7 @@ const DeckList = ({
                     created this deck on {deck.createdAt}
                   </span>
                 </Link>
+                
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
@@ -42,6 +44,13 @@ const DeckList = ({
               <h3>{deck.deckTitle}</h3>
               <h4>{deck.deckDescription}</h4>
             </div>
+            <Link
+              id="deck-footer"
+              className="btn btn-info btn-block "
+              to={`/decks/${deck._id}`}
+            >
+              Click here to see and/or edit the deck.
+            </Link>
           </div>
         ))}
         </div>
