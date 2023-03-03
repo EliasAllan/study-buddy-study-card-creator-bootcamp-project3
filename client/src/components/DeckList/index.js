@@ -44,13 +44,13 @@ const DeckList = ({
               <h3>{deck.deckTitle}</h3>
               <h4>{deck.deckDescription}</h4>
             </div>
-            <Link
+            {/* <Link
               id="deck-footer"
               className="btn btn-info btn-block "
               to={`/decks/${deck._id}`}
             >
               Click here to see and/or edit the deck.
-            </Link>
+            </Link> */}
           </div>
         ))}
         </div>
