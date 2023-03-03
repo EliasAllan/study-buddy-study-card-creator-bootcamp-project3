@@ -39,7 +39,6 @@ const CardForm = ({ deckId, cardAuthor }) => {
     }
   };
   
-  // if (Auth.getProfile().data.username ){
     // if (Auth.loggedIn() && Auth.getProfile().data.username === cardAuthor) {
   return (
     <div>
