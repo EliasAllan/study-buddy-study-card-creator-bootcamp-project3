@@ -6,7 +6,7 @@ import { ADD_CARD } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const CardForm = ({ deckId }) => {
+const CardForm = ({ deckId, cardAuthor }) => {
   const [cardText, setCardText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -38,7 +38,9 @@ const CardForm = ({ deckId }) => {
       setCharacterCount(value.length);
     }
   };
-
+  
+  // if (Auth.getProfile().data.username ){
+    // if (Auth.loggedIn() && Auth.getProfile().data.username === cardAuthor) {
   return (
     <div>
       <h4>Create a new card</h4>
@@ -82,7 +84,9 @@ const CardForm = ({ deckId }) => {
         </p>
       )}
     </div>
-  );
-};
+  )
+}
+// };
+// };
 
 export default CardForm;
