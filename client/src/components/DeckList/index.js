@@ -24,7 +24,7 @@ const DeckList = ({
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${deck.deckAuthor}`}
+                  to={`/decks/${deck._id}`}
                 >
                   {deck.deckAuthor} <br />
                   <span style={{ fontSize: '1rem'}}>
