@@ -77,7 +77,7 @@ const CardForm = ({ deckId, deckAuthor }) => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your decks. Please{' '}
+          You need to be logged in to edit decks. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
@@ -92,11 +92,11 @@ const CardForm = ({ deckId, deckAuthor }) => {
 
       {Auth.loggedIn() ? (
         <>
-          <h4>You need can only edit the decks you have created</h4>
+          <h4>You can only edit the decks you have created</h4>
         </>
       ) : (
         <p>
-          You need to be logged in to share your decks. Please{' '}
+          You need to be logged in to edit decks. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
