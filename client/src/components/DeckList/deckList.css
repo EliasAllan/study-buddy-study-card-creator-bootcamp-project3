@@ -26,7 +26,7 @@
 }
 
 #card-1 {
-    height: 13.5rem;
+    height: 12rem;
     width: 60rem;
     resize: both;
     white-space: nowrap;      /*keep the text on one line*/

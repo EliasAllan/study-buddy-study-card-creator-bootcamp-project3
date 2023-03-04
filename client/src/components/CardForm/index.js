@@ -6,7 +6,7 @@ import { ADD_CARD } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const CardForm = ({ deckId, cardAuthor }) => {
+const CardForm = ({ deckId, deckAuthor }) => {
   const [cardText, setCardText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -19,6 +19,7 @@ const CardForm = ({ deckId, cardAuthor }) => {
       const { data } = await addCard({
         variables: {
           deckId,
+          deckAuthor:Auth.getProfile().data.username,
           cardText,
           cardAuthor: Auth.getProfile().data.username,
         },
@@ -39,11 +40,9 @@ const CardForm = ({ deckId, cardAuthor }) => {
     }
   };
   
-    // if (Auth.loggedIn() && Auth.getProfile().data.username === cardAuthor) {
+    if (Auth.loggedIn() && Auth.getProfile().data.username === deckAuthor) {
   return (
     <div>
-      <h4>Create a new card</h4>
-
       {Auth.loggedIn() ? (
         <>
           <p
@@ -84,8 +83,27 @@ const CardForm = ({ deckId, cardAuthor }) => {
       )}
     </div>
   )
+
+    } else {
+
+    return (
+    <div>
+      
+
+      {Auth.loggedIn() ? (
+        <>
+          <h4>You need can only edit the decks you have created</h4>
+        </>
+      ) : (
+        <p>
+          You need to be logged in to share your decks. Please{' '}
+          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+        </p>
+      )}
+    </div>
+  )
+      }
 }
-// };
-// };
+
 
 export default CardForm;

@@ -38,7 +38,7 @@ const SingleDeck = () => {
       </div>
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <CardForm deckId={deck._id} />
+        <CardForm deckId={deck._id} deckAuthor={deck.deckAuthor}/>
       </div>
     </div>
   );
