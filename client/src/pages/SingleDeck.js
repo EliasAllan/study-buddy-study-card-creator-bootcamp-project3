@@ -25,13 +25,13 @@ const SingleDeck = () => {
   }
   return (
     <div className="my-3">
-      <h3 id="deck-header" className="bg-info text-light p-2 m-0">
+      <div id="deck-header" className="bg-info text-light p-2 m-0">
         <h2>{deck.deckTitle}</h2>
         
         <span style={{ fontSize: '1rem' }}>
         You created this deck on {deck.createdAt}.
         </span>
-      </h3>
+      </div>
       <div className="py-4">
       <div className="my-5">
         <CardList cards={deck.cards} deckId={deck._id} />
@@ -39,8 +39,10 @@ const SingleDeck = () => {
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <CardForm deckId={deck._id} deckAuthor={deck.deckAuthor}/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
       </div>
     </div>
+    
   );
 };
 
