@@ -87,9 +87,13 @@ function App() {
           </div>
           <Footer />
         </div>
+        
       </Router>
+      
     </ApolloProvider>
-  );
+    
+  
+    );
 }
 
 export default App;

@@ -1,59 +1,68 @@
 import React from "react";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./cardList.css";
-import { useMutation } from '@apollo/client';
-import { REMOVE_CARD } from '../../utils/mutations';
-import DeckForm from "../DeckForm";
-
+import { useMutation } from "@apollo/client";
+import { REMOVE_CARD } from "../../utils/mutations";
+// import function to register Swiper custom elements
+// import { register } from "swiper/element/bundle";
+// // register Swiper custom elements
+// register();
+// couldnt make it work in the project, had to use script in html
 const CardList = ({ cards = [], deckId }) => {
-  const [isFullscreen, setIsFullscreen] = React.useState(false);
   const navigate = useNavigate();
   const [removeCard, { error }] = useMutation(REMOVE_CARD);
   if (!cards.length) {
     return <h3 id="center">No Cards Yet</h3>;
-  };
+  }
 
   const handleDeleteCard = async (event) => {
     event.preventDefault();
 
     try {
-      console.log(event.target.value)
+      console.log(event.target.value);
       const { data } = await removeCard({
         variables: {
           deckId,
-          cardId:event.target.value
+          cardId: event.target.value,
         },
       });
-      navigate('/delete');
+      navigate("/delete");
     } catch (err) {
       console.error(err);
     }
   };
 
-
   return (
     <>
-      <div className="container">
-        <div className="row">
+      <swiper-container slides-per-view="1" speed="500" loop="true" >
         {cards &&
           cards.map((card) => (
-            <div key={card.cardId} className="col-sm-4 mb-3">
-              <div id="study-card" className=" bg-info text-light">
-                <button className="del-btn btn btn-lg btn-info m-2" value={card.cardId} onClick={handleDeleteCard}>
-                <div className="icon bg-info">
-                <i class="fa-solid fa-trash-can"></i>
-               </div> 
-                </button>
-
-                <h2 id="card-content" className="flex-column">{card.cardText}</h2>
+            <>
+              <swiper-slide>
+                <div key={card.cardId} className="col-sm h-100 d-inline-block" >
+                  <div id="study-card" className=" bg-info text-light">
+                    <button
+                      className="del-btn btn btn-lg btn-info m-2"
+                      value={card.cardId}
+                      onClick={handleDeleteCard}
+                    >
+                      <div className="icon bg-info">
+                        <i className="fa-solid fa-trash-can"></i>
+                      </div>
+                    </button>
+                    <h2 id="card-content" className="flex-column">
+                      {card.cardText}
+                    </h2>
+                  </div>
+                </div>
                 
-              </div>
-            </div>
+              </swiper-slide>
+            </>
           ))}
-          </div>
-      </div>
-
+      </swiper-container>
+      
     </>
+    
   );
 };
 

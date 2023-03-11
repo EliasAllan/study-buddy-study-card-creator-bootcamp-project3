@@ -14,8 +14,8 @@ const DeckList = ({
   }
 
   return (
-    <div class="container">
-      <div class="row">
+    <div name="container">
+      <div className="row">
       {showTitle && <h3 id="center">{title}</h3>}
       {decks &&
         decks.map((deck) => (
