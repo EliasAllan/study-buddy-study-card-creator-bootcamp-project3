@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import "./deckForm.css";
 import { ADD_DECK } from '../../utils/mutations';
-import { QUERY_DECKS, QUERY_ME } from '../../utils/queries';
-
+import { QUERY_DECKS, QUERY_ME, QUERY_USER } from '../../utils/queries';
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
 import Auth from '../../utils/auth';
 
 const DeckForm = () => {
+  
+  const { username: userParam } = useParams();
+
+  useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    variables: { username: userParam },
+  });
+  
   const [deckTitle, setDeckTitle] = useState('');
   const [deckDescription, setDeckDescription] = useState('');
 
@@ -27,6 +35,7 @@ const DeckForm = () => {
         });
       } catch (e) {
         console.error(e);
+        console.log("this is a line 19 error");
       }
 
       //update me object's cache
@@ -42,7 +51,7 @@ const DeckForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await addDeck({
+      await addDeck({
         variables: {
           deckTitle,
           deckDescription,
