@@ -1,6 +1,4 @@
 import React from "react";
-import CardForm from "../components/CardForm";
-import CardList from "../components/CardList";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Delete = () => {

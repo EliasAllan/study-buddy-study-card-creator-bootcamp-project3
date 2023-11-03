@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./header.css";
 import logo from "../../assets/study-buddy-logo.jpeg";
 

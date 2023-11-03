@@ -1,6 +1,5 @@
 import React from 'react';
 import DeckForm from '../components/DeckForm';
-import DeckList from '../components/DeckList';
 
 const Create = () => {
   

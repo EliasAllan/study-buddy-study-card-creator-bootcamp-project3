@@ -1,8 +1,10 @@
-import React from "react";
+import React , { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import "./cardList.css";
 import { useMutation } from "@apollo/client";
 import { REMOVE_CARD } from "../../utils/mutations";
+
+
 // import function to register Swiper custom elements
 // import { register } from "swiper/element/bundle";
 // // register Swiper custom elements
@@ -20,19 +22,23 @@ const CardList = ({ cards = [], deckId }) => {
 
     try {
       console.log(event.target.value);
-      const { data } = await removeCard({
+      await removeCard({
         variables: {
           deckId,
           cardId: event.target.value,
         },
       });
+     
       navigate("/delete");
     } catch (err) {
-      console.error(err);
+      console.error(err)
+      console.log(error)
     }
   };
 
   return (
+
+    
     <>
       <swiper-container slides-per-view="1" speed="500" loop="true" >
         {cards &&
@@ -59,8 +65,7 @@ const CardList = ({ cards = [], deckId }) => {
               </swiper-slide>
             </>
           ))}
-      </swiper-container>
-      
+      </swiper-container>  
     </>
     
   );

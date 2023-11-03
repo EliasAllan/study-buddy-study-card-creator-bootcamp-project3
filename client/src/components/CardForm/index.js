@@ -16,7 +16,7 @@ const CardForm = ({ deckId, deckAuthor }) => {
     event.preventDefault();
 
     try {
-      const { data } = await addCard({
+      await addCard({
         variables: {
           deckId,
           deckAuthor:Auth.getProfile().data.username,
