@@ -1,24 +1,44 @@
-header {
-  height: 200px;
-}
-
 .study-buddy-logo {
   position: absolute;
 
 }
 
-.study-buddy-logo{
-width: 200px;
+.study-buddy-logo {
+  width: 200px;
 }
 
 #navbar {
 
   display: flex;
-    justify-content: flex-end;
-    margin-top: 40px;
-    flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 40px;
+  flex-direction: row;
+}
+
+.navitem {
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .navitem{
+
+
+  .study-buddy-logo {
+    position: static;
+
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navitem {
     border-radius: 20px;
   }
+}

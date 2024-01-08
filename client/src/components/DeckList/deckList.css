@@ -18,7 +18,9 @@
     justify-content: center;
 }
 
-
+.wrapper{
+width: auto;
+}
 #card-header{
     display: flex;
     flex-direction: column;
@@ -44,22 +46,13 @@
     border-radius: 20px;
 }
 
-#deck-container{
+#deck-container-large{
     border-radius: 20px;
  
 }
 
-@media screen and (max-width: 1199px) {
-    
-    #card-1 {
-        height: 12rem;
-        resize: both;
-        margin:12px;
-        white-space: nowrap;      /*keep the text on one line*/
-        overflow: hidden;         /*prevent the text from being shown outside the border*/
-        text-overflow: ellipsis;  /*cut off text with an elipsis*/
-        border-radius: 20px;
-    }
-  
-  
-  }
+#deck-container-small{
+    border-radius: 20px;
+ 
+}
+
