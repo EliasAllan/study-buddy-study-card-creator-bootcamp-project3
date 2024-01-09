@@ -1,35 +1,64 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client";
+import React, { Fragment } from "react";
+import Media from "react-media";
 
-import DeckList from '../components/DeckList';
+import DeckList from "../components/DeckList";
 // import DeckForm from '../components/DeckForm';
 
-import { QUERY_DECKS } from '../utils/queries';
+import { QUERY_DECKS } from "../utils/queries";
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_DECKS);
   const decks = data?.decks || [];
-  console.log(data)
+  console.log(data);
   return (
-    <main>
-      <div  className="flex-row justify-center">
-        <div
-          id="deck-container"
-          className="col-12 col-md-10 mb-3 p-3"
-        >
-         {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <DeckList
-            title="Subjects other users studied recently ..."
-            decks={decks}
-            />
-          )}
-        </div>
-        <div className="col-12 col-md-8 mb-3">
-        </div>
-      </div>
-    </main>
+    <div>
+      <Media
+        queries={{
+          small: "(max-width: 599px)",
+          medium: "(min-width: 600px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)",
+        }}
+      >
+        {(matches) => (
+          <Fragment>
+            {matches.small && (
+              <>
+                <main>
+                  <div id="deck-container-small">
+                    {loading ? (
+                      <div>Loading...</div>
+                    ) : (
+                      <DeckList
+                        title="Recent Decks"
+                        decks={decks}
+                      />
+                    )}
+                  </div>
+                </main>
+              </>
+            )}
+            {matches.medium && <></>}
+            {matches.large && (
+              <>
+                <main>
+                  <div id="deck-container-large">
+                    {loading ? (
+                      <div>Loading...</div>
+                    ) : (
+                      <DeckList
+                        title="Recent Decks"
+                        decks={decks}
+                      />
+                    )}
+                  </div>
+                </main>
+              </>
+            )}
+          </Fragment>
+        )}
+      </Media>
+    </div>
   );
 };
 
