@@ -29,16 +29,25 @@ const Home = () => {
                     {loading ? (
                       <div>Loading...</div>
                     ) : (
-                      <DeckList
-                        title="Recent Decks"
-                        decks={decks}
-                      />
+                      <DeckList title="Recent Decks" decks={decks} />
                     )}
                   </div>
                 </main>
               </>
             )}
-            {matches.medium && <></>}
+            {matches.medium && (
+              <>
+                <main>
+                  <div id="deck-container-large">
+                    {loading ? (
+                      <div>Loading...</div>
+                    ) : (
+                      <DeckList title="Recent Decks" decks={decks} />
+                    )}
+                  </div>
+                </main>
+              </>
+            )}
             {matches.large && (
               <>
                 <main>
@@ -46,10 +55,7 @@ const Home = () => {
                     {loading ? (
                       <div>Loading...</div>
                     ) : (
-                      <DeckList
-                        title="Recent Decks"
-                        decks={decks}
-                      />
+                      <DeckList title="Recent Decks" decks={decks} />
                     )}
                   </div>
                 </main>
