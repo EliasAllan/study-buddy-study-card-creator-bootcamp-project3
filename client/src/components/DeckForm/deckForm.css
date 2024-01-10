@@ -1,4 +1,7 @@
-#create-deck-text{
+#create-deck-text{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     border-radius: 20px;
 
 }

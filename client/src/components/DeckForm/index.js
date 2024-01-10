@@ -82,7 +82,7 @@ const DeckForm = () => {
 
   return (
     <div>
-      <h3>What's the study topic for your new deck?</h3>
+      <h3>What is the Deck's title ?</h3>
 
       {Auth.loggedIn() ? (
         <>
