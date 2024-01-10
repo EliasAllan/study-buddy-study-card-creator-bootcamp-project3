@@ -57,7 +57,7 @@
 @media screen and (max-width: 1199px) {
     #card-1 {
         height: 12rem;
-        width: 29rem;
+        width: 25rem;
         resize: both;
         white-space: nowrap;      /*keep the text on one line*/
         overflow: hidden;         /*prevent the text from being shown outside the border*/
@@ -65,3 +65,5 @@
         border-radius: 20px;
     }
   }
+
+ 
