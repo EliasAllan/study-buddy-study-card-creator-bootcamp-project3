@@ -1,38 +1,37 @@
-.fa-trash-can{
-    color:#1bbc9b
+.fa-trash-can {
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: color var(--transition-speed);
 }
 
 .fa-trash-can:hover {
-    color:white;
+  color: var(--primary-color);
 }
 
 .fa-x:active {
-    color: black;
+  color: var(--text-color);
 }
 
 .container {
-    flex-wrap: nowrap;
-    border-radius: 20px;
+  flex-wrap: nowrap;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 #study-card {
-    overflow: auto;
-    word-break: break-word;
+  overflow: auto;
+  word-break: break-word;
 }
 
-h3{
-    text-align: center;
+h3 {
+  text-align: center;
 }
 
-.del-btn{
-    border-radius: 20px;
+.del-btn,
+#greetings {
+  border-radius: var(--border-radius);
 }
 
-#greetings{
-    border-radius: 20px;
-
-}
-
-#card-content{
-    font-size: 5rem;
+#card-content {
+  font-size: 5rem;
 }

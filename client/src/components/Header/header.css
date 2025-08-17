@@ -1,44 +1,48 @@
-.study-buddy-logo {
-  position: absolute;
-
+header {
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .study-buddy-logo {
-  width: 200px;
+  width: 160px;
+  position: static;
 }
 
 #navbar {
-
   display: flex;
-  justify-content: flex-end;
-  margin-top: 40px;
-  flex-direction: row;
+  gap: 1rem;
+  margin-top: 0;
 }
 
 .navitem {
-  border-radius: 20px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+.navitem:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  color: #fff;
 }
 
 @media screen and (max-width: 1199px) {
   header {
-    display: flex;
+    flex-direction: column;
+  }
+  #navbar {
     flex-direction: column;
     align-items: center;
-  }
-
-
-
-  .study-buddy-logo {
-    position: static;
-
-  }
-
-  #navbar {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navitem {
-    border-radius: 20px;
   }
 }
