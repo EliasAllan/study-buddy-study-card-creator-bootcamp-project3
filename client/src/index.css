@@ -1709,3 +1709,35 @@ label form [type='radio'] {
     align-content: center;
   }
 }
+
+/* Modern theme variables */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #50e3c2;
+  --background-color: #f7f9fc;
+  --text-color: #333;
+  --border-radius: 0.75rem;
+  --transition-speed: 0.3s;
+  --font-family-base: 'Inter', 'Open Sans', sans-serif;
+}
+
+body {
+  background: var(--background-color);
+  font-family: var(--font-family-base);
+  color: var(--text-color);
+}
+
+button,
+.navitem,
+.btn {
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+button:hover,
+.navitem:hover,
+.btn:hover {
+  transform: translateY(-2px);
+}
+
